@@ -1,0 +1,45 @@
+{
+  "recorded_at": "2026-11-13T12:22:13.514Z",
+  "node": "v24.22.1",
+  "platform": "linux",
+  "arch": "x64",
+  "cpu": "INTEL(R) XEON(R) PLATINUM 8573C",
+  "logical_cpus": 5,
+  "memory_bytes": 35743748096,
+  "runs": 1,
+  "results": [
+    {
+      "text_files": 1000,
+      "binary_files": 1,
+      "event_content_bytes": 128010,
+      "ms": {
+        "initialize": 17.7,
+        "initial_checkpoint": 363.76,
+        "checkpoint_ten_changes": 266.69,
+        "diff": 6.22,
+        "materialize": 1811.4,
+        "search": 0.84
+      },
+      "initial_blob_bytes": 2076466,
+      "incremental_blob_bytes": 100,
+      "archive_disk_bytes": 3876796
+    },
+    {
+      "text_files": 10000,
+      "binary_files": 1,
+      "event_content_bytes": 128010,
+      "ms": {
+        "initialize": 13.42,
+        "initial_checkpoint": 2805.51,
+        "checkpoint_ten_changes": 1990.74,
+        "diff": 51.29,
+        "materialize": 12109.15,
+        "search": 0.63
+      },
+      "initial_blob_bytes": 11337466,
+      "incremental_blob_bytes": 100,
+      "archive_disk_bytes": 43894948
+    }
+  ],
+  "hyperweave": "0.2.0"
+}

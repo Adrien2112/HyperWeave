@@ -1,0 +1,37 @@
+{
+  "name": "hyperweave",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "Local development context archive with immutable events and restorable checkpoints",
+  "engines": {
+    "node": ">=24.22.1 <25"
+  },
+  "bin": {
+    "hyperweave": "dist/packages/cli/src/index.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test tests/*.test.mjs",
+    "demo": "npm run build && node scripts/demo.mjs",
+    "benchmark": "npm run build && node scripts/benchmark.mjs",
+    "start": "node dist/packages/cli/src/index.js",
+    "prepack": "npm run build",
+    "pack:check": "npm run build && node scripts/package-smoke.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "24.19.2",
+    "typescript": "7.0.2"
+  },
+  "files": [
+    "dist/packages",
+    "README.md",
+    "docs",
+    "extensions/cursor/README.md"
+  ],
+  "exports": {
+    ".": "./dist/packages/core/src/index.js",
+    "./protocol": "./dist/packages/protocol/src/index.js",
+    "./adapter-sdk": "./dist/packages/adapter-sdk/src/index.js"
+  }
+}
